@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitness Cube-Workout Studio</title>
+<head>
+<style>
+body{background-color:#E2E2D7;margin:20px;}
+a {float:right;text-decoration: none;target:_blank;
+color:#464033;padding:25px;font-size:140%;}
+a:hover{color:#7E7C73}
+</style>
+</head>
+<body>
+<img src="logo.png" height="75" width="75" alt="logo" style="float: left;">
+<a href="Contact us.html">Contact us</a>
+<a href="Plans.html">Plans</a>
+<a href="Trainers.html">Trainers</a>
+<a href="services.html">Services</a>
+<a href="index.html">Home</a><br>
+<h1 style="color:#464033;font-family: Garamond, serif;">FITNESS CUBE</h1><br>
+<script type='text/javascript'> 
+ function formValidator() 
+ {  
+ var email = document.getElementById('email'); 
+ var pass = document.getElementById('pass'); 
+ if(emailValidator(email, "Please enter a valid email address")){ 
+ if(lengthRestriction(pass, 6)){ 
+ if(isAlphanumeric(pass, "please enter Numbers and Letters Only for password")){ 
+ return true; 
+ } } } 
+ return false; 
+ }
+
+function isAlphanumeric(elem, helperMsg){ 
+ var alphaExp = /^[0-9a-zA-Z]+$/; 
+ if(elem.value.match(alphaExp)){ 
+ return true; 
+ }else{ 
+ alert(helperMsg); 
+ elem.focus(); 
+ return false; 
+ } 
+ } 
+
+function lengthRestriction(elem, min){ 
+ var uInput = elem.value; 
+ if(uInput.length >= min){ 
+ return true; 
+ }else{ 
+ alert("Please enter minimum " +min+ " characters"); 
+ elem.focus(); 
+ return false; 
+ } 
+ } 
+
+function emailValidC:\xampp\htdocs\gym\connect.phpator(elem, helperMsg) 
+ { 
+var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; 
+ if(elem.value.match(emailExp)) 
+ { 
+ return true; 
+ } 
+ else{ 
+ alert(helperMsg); 
+ elem.focus(); 
+ return false; 
+ } 
+ } 
+
+
+ </script> 
+
+
+<h1 style="font-family: Garamond, serif;font-size:180%;text-align:center;color:#5C4E4E;">LOG-IN</h1><br>
+<form onsubmit='return formValidator()' action="login1.php" method="post"> 
+ Email Address <font color="red">* </font> &nbsp;&nbsp;&nbsp; 
+ <input type='text' id='email' name='email' /><br /> 
+  &nbsp;&nbsp;&nbsp; 
+ <br />
+ Password <br/>(minimum 6 characters)<font color="red">* </font> &nbsp;&nbsp;&nbsp; 
+ <input type='password' id='pass' name='password'> <br /><br/>
+ <br/>
+ 
+ <input type='Submit' value='Submit' /> 
+ <input type='Reset' value='Reset' />
+
+ </form>  
+</body>
+</html>
